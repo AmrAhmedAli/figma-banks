@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 17;
+  border-bottom: 2px solid rgb(243, 243, 243);
+}
+
+.col-content {
+  width: 100%;
+  margin-left: 18%;
+  margin-right: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-area {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-area .navigation li {
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+}
+.nav-area .navigation li a {
+  cursor: pointer;
+  color: black;
+  padding: 0 15px;
+  font-size: small;
+}
+
+.nav-area .navigation li a:hover {
+  color: #82e600;
+}
+.navigation {
+  display: flex;
+  margin-right: 6rem;
+}
+.details {
+  display: flex;
+  justify-content: center;
+}
+.details li {
+  cursor: pointer;
+}
+.favorite {
+  margin-right: 1.3rem;
+  margin-left: 1.3rem;
+  padding-right: 1.1rem;
+  padding-left: 1.1rem;
+  border-right: 2px solid rgb(243, 243, 243);
+  border-left: 2px solid rgb(243, 243, 243);
+}
+::ng-deep .material-icons {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  font-weight: bold !important;
+}

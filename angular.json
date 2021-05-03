@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "figma-banks"
+    }
+  },
+  "defaultProject": "figma-banks",
+  "cli": {
+    "analytics": "371cf793-27ca-4c31-aba9-5a61e1a65125"
+  }
 }

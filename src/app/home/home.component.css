@@ -1,0 +1,24 @@
+.secondary-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.header {
+  align-self: center;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  font-size: xx-large;
+}
+.sub-header {
+  margin-top: 1.2rem;
+  align-self: center;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: lighter;
+  font-size: small;
+  width: 31rem;
+  text-align: center;
+}
