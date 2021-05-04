@@ -2,6 +2,7 @@
   href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
   rel="stylesheet"
 />
+<!-- header -->
 <header>
   <nav class="col-content">
     <ul class="nav-area">
@@ -40,4 +41,67 @@
   </nav>
 </header>
 
+<!-- routes here -->
 <router-outlet></router-outlet>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="main-footer-container">
+    <div class="main-cols">
+      <div class="block-rows">
+        <p class="col-title">Menu</p>
+        <div>
+          <p class="col-lables">New Vehicles</p>
+          <p class="col-lables">Used Vehicles</p>
+          <p class="col-lables">Financing</p>
+          <p class="col-lables">Parts</p>
+          <p class="col-lables">Register Your Vehicles</p>
+        </div>
+      </div>
+      <div class="block-rows">
+        <p class="col-title">Follow Us</p>
+        <div style="vertical-align: middle">
+          <p class="col-lables-social">
+            <img src="assets/facebook.png" class="logo" />Facebook
+          </p>
+          <p class="col-lables-social">
+            <img src="assets/twitter.png" class="logo" />Twitter
+          </p>
+          <p class="col-lables-social">
+            <img src="assets/youtube.png" class="logo" />Youtube
+          </p>
+          <p class="col-lables-social">
+            <img src="assets/linkedin.png" class="logo" />Linkedin
+          </p>
+        </div>
+      </div>
+      <div class="block-rows">
+        <p class="col-title">NewsLetter</p>
+        <div class="col-lables-news">
+          <p>
+            Subscribe to our newsletter to recieve out latest news and updates
+          </p>
+        </div>
+        <div style="width: 100%">
+          <mat-form-field style="width: 100%" [floatLabel]="'never'">
+            <input
+              class="email-inp"
+              matInput
+              id="email"
+              type="email"
+              placeholder="Your Email"
+            />
+            <button class="footer-btn" mat-button>Subscribe</button>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="secondary-footer-container">
+    <div class="end-of-footer">
+      <p style="cursor: pointer">Privacy policy</p>
+      <p style="margin-left: 1rem; margin-right: 1rem">|</p>
+      <p style="cursor: pointer">Terms of use</p>
+    </div>
+  </div>
+</footer>
