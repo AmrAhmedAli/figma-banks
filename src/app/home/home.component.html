@@ -287,6 +287,96 @@
     </div>
     <div class="col-right">
       <p class="col-left-header">Calculator</p>
+      <form
+        class="form-field"
+        [formGroup]="basicForm"
+        (ngSubmit)="submit(basicForm.value)"
+      >
+        <div class="calc-row">
+          <div class="calc-col">
+            <p class="inp-title">Vehicle Price (SR)</p>
+            <mat-form-field class="example-full-width">
+              <input
+                class="inp"
+                matInput
+                formControlName="price"
+                id="price"
+                type="number"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-col">
+            <p class="inp-title">Interest Rate (%)</p>
+            <mat-form-field class="example-full-width">
+              <input
+                class="inp"
+                matInput
+                formControlName="price"
+                id="price"
+                type="number"
+              />
+            </mat-form-field>
+          </div>
+          <div class="calc-col">
+            <p class="inp-title">Down Payment (SR)</p>
+            <mat-form-field class="example-full-width">
+              <input
+                class="inp"
+                matInput
+                formControlName="price"
+                id="price"
+                type="number"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-col-full">
+            <div class="inp-title-container">
+              <p class="inp-title">Financing duration</p>
+              <p class="inp-title-desc">{{ displayedMonth }}</p>
+            </div>
+            <mat-slider
+              thumbLabel
+              [displayWith]="formatLabel"
+              step="1"
+              min="1"
+              max="60"
+              (input)="changeSlider($event)"
+              aria-label="units"
+            ></mat-slider>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-col-full">
+            <mat-card class="payment-card">
+              <mat-card-content class="category-body">
+                <div class="category-content">
+                  <div class="payment-desc">Estimated Monthly Payment</div>
+                  <div class="payment-price">SR 15,000</div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-col-full">
+            <div class="total-amount-row">
+              <p class="total-amount-row-head">Total Loan Amount: SR</p>
+              <p class="total-amount-row-body">300,000</p>
+            </div>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-col-full">
+            <div class="update-btn-container">
+              <button class="app-btn" mat-button>Update Bank List</button>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

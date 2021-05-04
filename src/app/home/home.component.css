@@ -57,6 +57,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 .category-card {
   padding: 0 !important;
@@ -64,6 +65,7 @@
   border: 1px solid rgb(228, 228, 228);
   width: 32%;
   cursor: pointer !important;
+  min-width: 12rem;
 }
 .category-card:hover {
   background-color: rgb(252, 252, 252);
@@ -160,7 +162,79 @@
 
 .col-right {
   width: 45%;
-  margin-left: 1rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-field {
+  margin-top: 1.5rem;
+}
+.calc-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.calc-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 13rem;
+  flex-wrap: wrap;
+}
+.calc-col-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.inp-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.inp-title {
+  margin-left: 3px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: small;
+}
+.inp-title-desc {
+}
+.inp {
+  border: 1px solid rgb(221, 221, 221);
+  height: 2.2rem;
+  border-radius: 4px;
+  text-indent: 1.2rem;
+  font-size: medium;
+  width: 15rem;
+}
+.payment-card {
+  background-color: #e9e9e9;
+  box-shadow: 0 0 0 #fff;
+}
+.payment-desc {
+  font-size: 20px;
+  font-weight: 280;
+}
+.payment-price {
+  margin-top: 2rem;
+  font-size: 38px;
+  font-weight: 400;
+}
+.total-amount-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.8rem;
+}
+.total-amount-row-head {
+  font-weight: light;
+  font-size: large;
+}
+.total-amount-row-body {
+  margin-left: 4px;
+  font-weight: bold;
+  font-size: large;
 }
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
   background-color: #fff;
@@ -198,4 +272,14 @@
 }
 ::ng-deep .mat-card-header-text {
   height: 50%;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+  background-color: #000000 !important;
+  border-width: 1rem;
+}
+::ng-deep .mat-accent .mat-slider-thumb-label {
+  background-color: #000000 !important;
+}
+::ng-deep .mat-accent .mat-slider-thumb {
+  background-color: #000000 !important;
 }

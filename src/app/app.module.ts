@@ -21,6 +21,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatChipsModule } from '@angular/material/chips';
 import { CommonModule } from '@angular/common';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -44,6 +45,7 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatTabsModule,
     MatRadioModule,
+    MatSliderModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },

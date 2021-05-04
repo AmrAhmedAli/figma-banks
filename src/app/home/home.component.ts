@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,27 @@ export class HomeComponent implements OnInit {
   filter: string;
   selectedBanks: Array<string> = [null, null, null];
   len: number = 0;
+  basicForm: FormGroup;
+  displayedMonth: string = '1 Month';
+  value = 1;
   constructor() {}
 
   ngOnInit(): void {
+    this.basicForm = new FormGroup({
+      price: new FormControl('', [Validators.required]),
+    });
     this.filter = '1';
+  }
+  formatLabel(value: number) {
+    return value;
+  }
+  changeSlider(event: any) {
+    let value = event.value;
+    if (value > 1) {
+      this.displayedMonth = value + ' Months';
+    } else {
+      this.displayedMonth = value + ' Month';
+    }
   }
   submit(value: string): void {
     if (this.selectedBanks.includes(value)) {
