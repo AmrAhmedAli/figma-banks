@@ -1,9 +1,292 @@
 <div class="secondary-page">
-  <p class="header">Financing (1/4)</p>
-  <p class="sub-header">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida
-    ex sit amet euismod eleifend. Nulla at vulputate diam. Proin elementum
-    rutrum lorem vel suscipit. Mauris nunc dui, pretium a nunc sed, molestie
-    efficitur enim.
-  </p>
+  <div class="header-container">
+    <p class="header">Financing (1/4)</p>
+    <p class="sub-header">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      gravida ex sit amet euismod eleifend. Nulla at vulputate diam. Proin
+      elementum rutrum lorem vel suscipit. Mauris nunc dui, pretium a nunc sed,
+      molestie efficitur enim.
+    </p>
+  </div>
+  <div class="body-container">
+    <div class="col-left">
+      <p class="col-left-header">Choose Bank</p>
+      <div class="filter">
+        <p class="filter-text">Filter by:</p>
+        <mat-form-field appearance="fill">
+          <mat-select [(value)]="filter">
+            <mat-option value="1">Lowest Interest Rate</mat-option>
+            <mat-option value="2">Lowest Down Payment</mat-option>
+            <mat-option value="3">Bank Rating</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="banks-list">
+        <div class="banks-list-row">
+          <mat-card id="ncb-bank" (click)="submit('ncb')" class="category-card">
+            <div id="ncb-polygon" hidden class="selection-polygon">
+              <p id="ncb-text" class="selection-polygon-text">X</p>
+              <svg height="40" width="40">
+                <polygon points="0,0 40,40 50,0" style="fill: black" />
+              </svg>
+            </div>
+            <mat-card-header class="category-header">
+              <mat-card-title class="category-card-title"
+                >National Commercial Bank</mat-card-title
+              >
+              <div
+                class="category-image"
+                style="
+                  background: url(assets/ncb.png) no-repeat center center;
+                  background-size: 50%;
+                "
+              ></div>
+            </mat-card-header>
+
+            <mat-card-content class="category-body">
+              <div class="category-content">
+                <div class="category-percentage">10%</div>
+                <div class="category-description">Interest Rate</div>
+                <div class="category-details-container">
+                  <div class="details-row">
+                    <p class="details-row-head">Monthly Payment: SR</p>
+                    <p class="details-row-body">3,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Final Payment: SR</p>
+                    <p class="details-row-body">30,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Down Payment: SR</p>
+                    <p class="details-row-body">100,000</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card
+            id="sabb-bank"
+            (click)="submit('sabb')"
+            class="category-card"
+          >
+            <div id="sabb-polygon" hidden class="selection-polygon">
+              <p id="sabb-text" class="selection-polygon-text">X</p>
+              <svg height="40" width="40">
+                <polygon points="0,0 40,40 50,0" style="fill: black" />
+              </svg>
+            </div>
+            <mat-card-header class="category-header">
+              <mat-card-title class="category-card-title"
+                >The Saudi British Bank (SABB)</mat-card-title
+              >
+              <div
+                class="category-image"
+                style="
+                  background: url(assets/sabb.png) no-repeat center center;
+                  background-size: 50%;
+                "
+              ></div>
+            </mat-card-header>
+
+            <mat-card-content class="category-body">
+              <div class="category-content">
+                <div class="category-percentage">10%</div>
+                <div class="category-description">Interest Rate</div>
+                <div class="category-details-container">
+                  <div class="details-row">
+                    <p class="details-row-head">Monthly Payment: SR</p>
+                    <p class="details-row-body">3,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Final Payment: SR</p>
+                    <p class="details-row-body">30,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Down Payment: SR</p>
+                    <p class="details-row-body">100,000</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card id="sib-bank" (click)="submit('sib')" class="category-card">
+            <div id="sib-polygon" hidden class="selection-polygon">
+              <p id="sib-text" class="selection-polygon-text">X</p>
+              <svg height="40" width="40">
+                <polygon points="0,0 40,40 50,0" style="fill: black" />
+              </svg>
+            </div>
+            <mat-card-header class="category-header">
+              <mat-card-title class="category-card-title"
+                >Saudi Investement Bank</mat-card-title
+              >
+              <div
+                class="category-image"
+                style="
+                  background: url(assets/sib.png) no-repeat center center;
+                  background-size: 50%;
+                "
+              ></div>
+            </mat-card-header>
+
+            <mat-card-content class="category-body">
+              <div class="category-content">
+                <div class="category-percentage">10%</div>
+                <div class="category-description">Interest Rate</div>
+                <div class="category-details-container">
+                  <div class="details-row">
+                    <p class="details-row-head">Monthly Payment: SR</p>
+                    <p class="details-row-body">3,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Final Payment: SR</p>
+                    <p class="details-row-body">30,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Down Payment: SR</p>
+                    <p class="details-row-body">100,000</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="banks-list-row">
+          <mat-card
+            id="alinma-bank"
+            (click)="submit('alinma')"
+            class="category-card"
+          >
+            <div id="alinma-polygon" hidden class="selection-polygon">
+              <p id="alinma-text" class="selection-polygon-text">X</p>
+              <svg height="40" width="40">
+                <polygon points="0,0 40,40 50,0" style="fill: black" />
+              </svg>
+            </div>
+            <mat-card-header class="category-header">
+              <mat-card-title class="category-card-title"
+                >Alinma Bank</mat-card-title
+              >
+              <div
+                class="category-image"
+                style="
+                  background: url(assets/alinma.png) no-repeat center center;
+                  background-size: 50%;
+                "
+              ></div>
+            </mat-card-header>
+
+            <mat-card-content class="category-body">
+              <div class="category-content">
+                <div class="category-percentage">10%</div>
+                <div class="category-description">Interest Rate</div>
+                <div class="category-details-container">
+                  <div class="details-row">
+                    <p class="details-row-head">Monthly Payment: SR</p>
+                    <p class="details-row-body">3,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Final Payment: SR</p>
+                    <p class="details-row-body">30,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Down Payment: SR</p>
+                    <p class="details-row-body">100,000</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card id="bsf-bank" (click)="submit('bsf')" class="category-card">
+            <div id="bsf-polygon" hidden class="selection-polygon">
+              <p id="bsf-text" class="selection-polygon-text">X</p>
+              <svg height="40" width="40">
+                <polygon points="0,0 40,40 50,0" style="fill: black" />
+              </svg>
+            </div>
+            <mat-card-header class="category-header">
+              <mat-card-title class="category-card-title"
+                >Bank Saudi Fransi</mat-card-title
+              >
+              <div
+                class="category-image"
+                style="
+                  background: url(assets/bsf.png) no-repeat center center;
+                  background-size: 50%;
+                "
+              ></div>
+            </mat-card-header>
+
+            <mat-card-content class="category-body">
+              <div class="category-content">
+                <div class="category-percentage">10%</div>
+                <div class="category-description">Interest Rate</div>
+                <div class="category-details-container">
+                  <div class="details-row">
+                    <p class="details-row-head">Monthly Payment: SR</p>
+                    <p class="details-row-body">3,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Final Payment: SR</p>
+                    <p class="details-row-body">30,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Down Payment: SR</p>
+                    <p class="details-row-body">100,000</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card id="rb-bank" (click)="submit('rb')" class="category-card">
+            <div id="rb-polygon" hidden class="selection-polygon">
+              <p id="rb-text" class="selection-polygon-text">X</p>
+              <svg height="40" width="40">
+                <polygon points="0,0 40,40 50,0" style="fill: black" />
+              </svg>
+            </div>
+            <mat-card-header class="category-header">
+              <mat-card-title class="category-card-title"
+                >Riyad Bank</mat-card-title
+              >
+              <div
+                class="category-image"
+                style="
+                  background: url(assets/rb.png) no-repeat center center;
+                  background-size: 50%;
+                "
+              ></div>
+            </mat-card-header>
+
+            <mat-card-content class="category-body">
+              <div class="category-content">
+                <div class="category-percentage">10%</div>
+                <div class="category-description">Interest Rate</div>
+                <div class="category-details-container">
+                  <div class="details-row">
+                    <p class="details-row-head">Monthly Payment: SR</p>
+                    <p class="details-row-body">3,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Final Payment: SR</p>
+                    <p class="details-row-body">30,000</p>
+                  </div>
+                  <div class="details-row">
+                    <p class="details-row-head">Down Payment: SR</p>
+                    <p class="details-row-body">100,000</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="app-btn" mat-button>Apply for financing</button>
+      </div>
+    </div>
+    <div class="col-right">
+      <p class="col-left-header">Calculator</p>
+    </div>
+  </div>
 </div>

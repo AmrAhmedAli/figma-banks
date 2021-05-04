@@ -5,20 +5,197 @@
   margin-left: 10%;
   margin-right: 10%;
 }
-.header {
-  align-self: center;
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.header {
   font-weight: 700;
   font-size: xx-large;
 }
 .sub-header {
-  margin-top: 1.2rem;
-  align-self: center;
-  font-family: Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  margin-top: 1rem;
   font-weight: lighter;
   font-size: small;
-  width: 31rem;
   text-align: center;
+}
+.body-container {
+  display: flex;
+  margin-top: 2rem;
+}
+.col-left {
+  display: flex;
+  flex-direction: column;
+  width: 57%;
+}
+.col-left-header {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.filter {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.filter-text {
+  color: rgb(161, 158, 158, 0.6);
+}
+.banks-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.banks-list-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.category-card {
+  padding: 0 !important;
+  box-shadow: 0 0 15px #ccc;
+  border: 1px solid rgb(228, 228, 228);
+  width: 32%;
+  cursor: pointer !important;
+}
+.category-card:hover {
+  background-color: rgb(252, 252, 252);
+}
+.category-card-business:hover {
+  background-color: rgb(252, 252, 252);
+}
+.category-card-first:hover {
+  background-color: rgb(252, 252, 252);
+}
+.category-header {
+  padding: 25px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid rgb(243, 243, 243);
+  height: 115px;
+}
+.category-card-title {
+  font-weight: bold;
+  margin-bottom: 0 !important;
+  font-size: large;
+  text-align: center;
+  height: 50%;
+}
+.category-image {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  filter: grayscale(1);
+}
+.category-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.category-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.category-percentage {
+  margin-top: 0.5rem;
+  font-size: 40px;
+}
+.category-description {
+  margin-top: 0.7rem;
+  font-size: smaller;
+  color: rgb(161, 158, 158, 0.6);
+  font-weight: 500;
+}
+.category-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.details-row {
+  display: flex;
+  flex-direction: row;
+}
+.details-row-head {
+  font-weight: light;
+}
+.details-row-body {
+  margin-left: 3px;
+  font-weight: bold;
+}
+.btn-container {
+  width: 100%;
+  text-align: center;
+}
+.app-btn {
+  background-color: black;
+  color: white;
+  width: 30%;
+  height: 2.7rem;
+  margin-bottom: 2rem;
+  border-radius: 0;
+}
+.selection-polygon {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+}
+.selection-polygon-text {
+  position: absolute;
+  width: 97%;
+  color: white;
+  margin-top: 1px;
+}
+
+.col-right {
+  width: 45%;
+  margin-left: 1rem;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff;
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 0.15em 0.75em 0 0.72em !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0 !important;
+}
+::ng-deep .mat-form-field-infix {
+  padding: 0.5em 0;
+  border-top: 0 !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+  transform: translateY(0) !important;
+}
+::ng-deep .mat-option {
+  border-left: 4px solid white;
+}
+::ng-deep.mat-option:hover {
+  background: white !important;
+  color: black !important;
+  border-left: 4px solid #82e600;
+}
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #000000;
+  border-left: 4px solid #82e600;
+}
+::ng-deep .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background: rgb(255 255 255 / 12%);
+}
+::ng-deep .mat-card-header-text {
+  height: 50%;
 }
